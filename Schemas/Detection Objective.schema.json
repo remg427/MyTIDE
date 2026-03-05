@@ -4004,10 +4004,10 @@
                                         "type": "array",
                                         "items": {
                                             "enum": [
-                                                "splunkExample Log Source"
+                                                "splunk::Example Log Source"
                                             ],
                                             "markdownEnumDescriptions": [
-                                                "### Example Log Source\n**System**: splunk\n**Description**: Example log source - Customize this to represent your actual log sources (endpoint logs, firewall logs, cloud audit logs, application logs, etc.). This description helps users understand what data is available for detections.\n\n### Associated Assets:\n\n- **Example Asset**\n- _Criticality_: High Value\n- _Description_: Example asset - Customize this to represent your actual infrastructure components such as servers, workstations, applications, cloud services, network devices, or any other entity that generates security logs. This description appears in the schema to guide users.\n  - _Custom Details_:\n    - owner: IT Operations\n    - location: Primary Data Center\n    - os: Windows Server 2022\n"
+                                                "### Example Log Source\n**System**: splunk\n**Description**: Example log source - Customize this to represent your actual log sources (endpoint logs, firewall logs, cloud audit logs, application logs, etc.). This description helps users understand what data is available for detections.\n\n### Associated Assets:\n\n**Example Asset**\n> - _Criticality_: High Value\n> - _Description_: Example asset - Customize this to represent your actual infrastructure components such as servers, workstations, applications, cloud services, network devices, or any other entity that generates security logs. This description appears in the schema to guide users.\n  - _Custom Details_:\n    - owner: IT Operations\n    - location: Primary Data Center\n    - os: Windows Server 2022\n"
                                             ],
                                             "uniqueItems": true
                                         }
