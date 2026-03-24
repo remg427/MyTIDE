@@ -38,14 +38,14 @@ jobs:
   # which are stored in the OpenTideHQ/CoreTide repository, on the development branch.
   # If you want to use a different branch, change the branch name after the @ symbol.
   Validation:
-    uses: OpenTideHQ/CoreTide/.github/workflows/validation.yml@development
+    uses: remg427/CoreTide/.github/workflows/validation.yml@development
     needs: Secrets
     with:
       coretide_ref: development
       opentide_secrets: ${{ needs.Secrets.outputs.opentide_secrets }}
 
   Framework:
-    uses: OpenTideHQ/CoreTide/.github/workflows/framework.yml@development
+    uses: remg427/CoreTide/.github/workflows/framework.yml@development
     needs:
       - Validation
       - Secrets
@@ -55,7 +55,7 @@ jobs:
 
 
   Documentation:
-    uses: OpenTideHQ/CoreTide/.github/workflows/documentation.yml@development
+    uses: remg427/CoreTide/.github/workflows/documentation.yml@development
     needs:
       - Validation
       - Secrets
@@ -64,15 +64,15 @@ jobs:
       opentide_secrets: ${{ needs.Secrets.outputs.opentide_secrets }}
       mdr_changes: ${{ needs.Validation.outputs.mdr_changes }}
       wiki_enabled: true
-      wiki_repo_owner: # The owner of the wiki repository
-      wiki_repo_name: # The name of the wiki repository
-      wiki_repo_branch: # The branch of the wiki repository
+      wiki_repo_owner: remg427  # The owner of the wiki repository
+      wiki_repo_name: MyTIDE.wiki  # The name of the wiki repository
+      wiki_repo_branch: main  # The branch of the wiki repository
     secrets:
-      wiki_token: ${{ secrets.YOUR_GITHUB_TOKEN }} # A GitHub token with write access to the wiki repository
+      wiki_token: ${{ secrets.GITHUB_TOKEN }} # A GitHub token with write access to the wiki repository
 
 
   Deploy:
-    uses: OpenTideHQ/CoreTide/.github/workflows/deployment.yml@development
+    uses: remg427/CoreTide/.github/workflows/deployment.yml@development
     needs:
       - Validation
       - Secrets
