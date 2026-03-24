@@ -38,29 +38,29 @@ jobs:
   # which are stored in the OpenTideHQ/CoreTide repository, on the development branch.
   # If you want to use a different branch, change the branch name after the @ symbol.
   Validation:
-    uses: remg427/CoreTide/.github/workflows/validation.yml@development
+    uses: remg427/CoreTide/.github/workflows/validation.yml@misp-sharing-objects
     needs: Secrets
     with:
-      coretide_ref: development
+      coretide_ref: misp-sharing-objects
       opentide_secrets: ${{ needs.Secrets.outputs.opentide_secrets }}
 
   Framework:
-    uses: remg427/CoreTide/.github/workflows/framework.yml@development
+    uses: remg427/CoreTide/.github/workflows/framework.yml@misp-sharing-objects
     needs:
       - Validation
       - Secrets
     with:
-      coretide_ref: development
+      coretide_ref: misp-sharing-objects
       opentide_secrets: ${{ needs.Secrets.outputs.opentide_secrets }}
 
 
   Documentation:
-    uses: remg427/CoreTide/.github/workflows/documentation.yml@development
+    uses: remg427/CoreTide/.github/workflows/documentation.yml@misp-sharing-objects
     needs:
       - Validation
       - Secrets
     with:
-      coretide_ref: development
+      coretide_ref: misp-sharing-objects
       opentide_secrets: ${{ needs.Secrets.outputs.opentide_secrets }}
       mdr_changes: ${{ needs.Validation.outputs.mdr_changes }}
       wiki_enabled: true
@@ -72,11 +72,11 @@ jobs:
 
 
   Deploy:
-    uses: remg427/CoreTide/.github/workflows/deployment.yml@development
+    uses: remg427/CoreTide/.github/workflows/deployment.yml@misp-sharing-objects
     needs:
       - Validation
       - Secrets
     if: ${{ needs.Validation.outputs.mdr_changes == 'true' }}
     with:
-      coretide_ref: development
+      coretide_ref: misp-sharing-objects
       opentide_secrets: ${{ needs.Secrets.outputs.opentide_secrets }}
