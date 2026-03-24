@@ -2,7 +2,38 @@
     "versions": {
         "layer": "4.5"
     },
-    "techniques": [],
+    "techniques": [
+        {
+            "techniqueID": "T1027.010",
+            "color": "#fc6b6b",
+            "comment": "[TVM] Powershell with encoded payload passed to cmdline",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1059",
+            "color": "#fc6b6b",
+            "comment": "[TVM] Powershell with encoded payload passed to cmdline",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1059.001",
+            "color": "#fc6b6b",
+            "comment": "[TVM] Powershell with encoded payload passed to cmdline",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1140",
+            "color": "#fc6b6b",
+            "comment": "[TVM] Powershell with encoded payload passed to cmdline",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1068",
+            "color": "#fc6b6b",
+            "comment": "[TVM] Powershell with encoded payload passed to cmdline",
+            "enabled": true
+        }
+    ],
     "name": "layer",
     "domain": "enterprise-attack",
     "hideDisabled": false,
