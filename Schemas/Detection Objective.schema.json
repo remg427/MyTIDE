@@ -138,11 +138,11 @@
                         "red"
                     ],
                     "markdownEnumDescriptions": [
-                        "\n### \u26aa clear\n\n\ud83d\udd11 **Identifier** : `TLP:CLEAR`\n\n_Vocabulary_ : `Traffic Light Protocol`\n\n \n\n\n\n\n\n---\n\nRecipients can spread this to the world, there is no limit on disclosure.\n",
-                        "\n### \ud83d\udfe2 green\n\n\ud83d\udd11 **Identifier** : `TLP:GREEN`\n\n_Vocabulary_ : `Traffic Light Protocol`\n\n \n\n\n\n\n\n---\n\nLimited disclosure, recipients can spread this within their community. Sources may use TLP:GREEN when information is useful to increase awareness within their wider community.\n",
-                        "\n### \ud83d\udfe0 amber\n\n\ud83d\udd11 **Identifier** : `TLP:AMBER`\n\n_Vocabulary_ : `Traffic Light Protocol`\n\n \n\n\n\n\n\n---\n\nLimited disclosure, recipients can only spread this on a need-to-know basis within their organization and its clients.\n",
-                        "\n### \ud83d\udfe0 amber+strict\n\n\ud83d\udd11 **Identifier** : `TLP:AMBER+STRICT`\n\n_Vocabulary_ : `Traffic Light Protocol`\n\n \n\n\n\n\n\n---\n\nSimilar to TLP:AMBER, but restricts sharing to the organization only.\n",
-                        "\n### \ud83d\udd34 red\n\n\ud83d\udd11 **Identifier** : `TLP:RED`\n\n_Vocabulary_ : `Traffic Light Protocol`\n\n \n\n\n\n\n\n---\n\nFor the eyes and ears of individual recipients only, no further disclosure.\n"
+                        "\n### \u26aa Clear\n\n\ud83d\udd11 **Identifier** : `TLP:CLEAR`\n\n_Vocabulary_ : `Traffic Light Protocol`\n\n \n\n\n\n\n\n---\n\nRecipients can spread this to the world, there is no limit on disclosure.\n",
+                        "\n### \ud83d\udfe2 Green\n\n\ud83d\udd11 **Identifier** : `TLP:GREEN`\n\n_Vocabulary_ : `Traffic Light Protocol`\n\n \n\n\n\n\n\n---\n\nLimited disclosure, recipients can spread this within their community. Sources may use TLP:GREEN when information is useful to increase awareness within their wider community.\n",
+                        "\n### \ud83d\udfe0 Amber\n\n\ud83d\udd11 **Identifier** : `TLP:AMBER`\n\n_Vocabulary_ : `Traffic Light Protocol`\n\n \n\n\n\n\n\n---\n\nLimited disclosure, recipients can only spread this on a need-to-know basis within their organization and its clients.\n",
+                        "\n### \ud83d\udfe0 Amber+Strict\n\n\ud83d\udd11 **Identifier** : `TLP:AMBER+STRICT`\n\n_Vocabulary_ : `Traffic Light Protocol`\n\n \n\n\n\n\n\n---\n\nSimilar to TLP:AMBER, but restricts sharing to the organization only.\n",
+                        "\n### \ud83d\udd34 Red\n\n\ud83d\udd11 **Identifier** : `TLP:RED`\n\n_Vocabulary_ : `Traffic Light Protocol`\n\n \n\n\n\n\n\n---\n\nFor the eyes and ears of individual recipients only, no further disclosure.\n"
                     ]
                 },
                 "classification": {
@@ -4004,10 +4004,10 @@
                                         "type": "array",
                                         "items": {
                                             "enum": [
-                                                "splunkExample Log Source"
+                                                "splunk::Example Log Source"
                                             ],
                                             "markdownEnumDescriptions": [
-                                                "### Example Log Source\n**System**: splunk\n**Description**: Example log source - Customize this to represent your actual log sources (endpoint logs, firewall logs, cloud audit logs, application logs, etc.). This description helps users understand what data is available for detections.\n\n### Associated Assets:\n\n- **Example Asset**\n- _Criticality_: High Value\n- _Description_: Example asset - Customize this to represent your actual infrastructure components such as servers, workstations, applications, cloud services, network devices, or any other entity that generates security logs. This description appears in the schema to guide users.\n  - _Custom Details_:\n    - owner: IT Operations\n    - location: Primary Data Center\n    - os: Windows Server 2022\n"
+                                                "### Example Log Source\n**System**: splunk\n**Description**: Example log source - Customize this to represent your actual log sources (endpoint logs, firewall logs, cloud audit logs, application logs, etc.). This description helps users understand what data is available for detections.\n\n### Associated Assets:\n\n- **Example Asset**\n  - _Criticality_: High Value\n  - _Description_: Example asset - Customize this to represent your actual infrastructure components such as servers, workstations, applications, cloud services, network devices, or any other entity that generates security logs. This description appears in the schema to guide users.\n  - _Custom Details_:\n    - owner: IT Operations\n    - location: Primary Data Center\n    - os: Windows Server 2022\n"
                                             ],
                                             "uniqueItems": true
                                         }
@@ -4023,6 +4023,8 @@
                                     "enum": [
                                         "host::Account",
                                         "cloud::Account",
+                                        "host::User",
+                                        "cloud::User",
                                         "host::Hostname",
                                         "network::IP Address",
                                         "host::Process",
@@ -4058,6 +4060,8 @@
                                     "markdownEnumDescriptions": [
                                         "\n###  Account\n\n\ud83d\udd11 **Identifier** : `39d5e5fa-d7d8-4617-9eb0-a31e61b78d49`\n\n_Vocabulary_ : `Signal Entities`\n\n \n\n\n\n **Host Entities** : _Host Related Entities_\n\n\n\n---\n\nRepresents a user account entity, including local, domain, or cloud-based\naccounts.\n\n",
                                         "\n###  Account\n\n\ud83d\udd11 **Identifier** : `39d5e5fa-d7d8-4617-9eb0-a31e61b78d49`\n\n_Vocabulary_ : `Signal Entities`\n\n \n\n\n\n **Cloud Entities** : _Cloud Related Entities_\n\n\n\n---\n\nRepresents a user account entity, including local, domain, or cloud-based\naccounts.\n\n",
+                                        "\n###  User\n\n\ud83d\udd11 **Identifier** : `44156a4d-2b7b-4835-b6c3-9f329b81dbd0`\n\n_Vocabulary_ : `Signal Entities`\n\n \n\n\n\n **Host Entities** : _Host Related Entities_\n\n\n\n---\n\nRepresents an individual user, including their identity and associated\nattributes.\n\n",
+                                        "\n###  User\n\n\ud83d\udd11 **Identifier** : `44156a4d-2b7b-4835-b6c3-9f329b81dbd0`\n\n_Vocabulary_ : `Signal Entities`\n\n \n\n\n\n **Cloud Entities** : _Cloud Related Entities_\n\n\n\n---\n\nRepresents an individual user, including their identity and associated\nattributes.\n\n",
                                         "\n###  Hostname\n\n\ud83d\udd11 **Identifier** : `c7bad96d-6e37-4d8d-8373-ce5489958068`\n\n_Vocabulary_ : `Signal Entities`\n\n \n\n\n\n **Host Entities** : _Host Related Entities_\n\n\n\n---\n\nRepresents the name of a host or device in the network.\n\n",
                                         "\n###  IP Address\n\n\ud83d\udd11 **Identifier** : `f25eef26-c9df-44ae-9ae2-030943600f93`\n\n_Vocabulary_ : `Signal Entities`\n\n \n\n\n\n **Network Entities** : _Network Related Entities_\n\n\n\n---\n\nRepresents an IPv4 or IPv6 address associated with a host or network\nconnection.\n\n",
                                         "\n###  Process\n\n\ud83d\udd11 **Identifier** : `f73506f3-fdf9-473c-8286-ad16ae56ddf6`\n\n_Vocabulary_ : `Signal Entities`\n\n \n\n\n\n **Host Entities** : _Host Related Entities_\n\n\n\n---\n\nRepresents a running process on a host, including its attributes like\nprocess ID and command line.\n\n",
