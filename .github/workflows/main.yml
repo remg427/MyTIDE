@@ -65,7 +65,7 @@ jobs:
       mdr_changes: ${{ needs.Validation.outputs.mdr_changes }}
       wiki_enabled: true
       wiki_repo_owner: remg427  # The owner of the wiki repository
-      wiki_repo_name: MyTIDE.wiki  # The name of the wiki repository
+      wiki_repo_name: MyWikiTIDE  # The name of the wiki repository
       wiki_repo_branch: main  # The branch of the wiki repository
     secrets:
       wiki_token: ${{ secrets.GITHUB_TOKEN }} # A GitHub token with write access to the wiki repository
